@@ -771,6 +771,11 @@ if (leadForm){
     if (typeof gtag === 'function'){
       gtag('event', 'generate_lead', { form_id: 'diagnostico_areas_contaminadas' });
     }
+    // Redireciona para a página de obrigado após o envio (pequeno delay para
+    // garantir que o evento de conversão do GTM/gtag seja disparado antes da navegação).
+    setTimeout(function(){
+      window.location.href = 'https://materiais.vennerambiental.com.br/obrigado-pelo-contato';
+    }, 500);
   });
 }
 </script>
